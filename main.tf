@@ -6,6 +6,7 @@ variable "unique_string" {
 # Resources
 resource "aws_s3_bucket" "my-bucket" {
   bucket = bucket = "my-bucket-${var.unique_string}"
+  
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
