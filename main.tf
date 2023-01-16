@@ -2,12 +2,13 @@ provider "aws" {
   region = "us-west-2"
 }
 
-variable "unique_string" {
-  type = string
-}
-
 resource "random_string" "random_string" {
   length = 8
+}
+
+variable "unique_string" {
+  default = "${random_string.random_string.result}"
+  type = string
 }
 
 resource "aws_s3_bucket" "my-bucket" {
