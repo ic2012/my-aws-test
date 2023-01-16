@@ -2,12 +2,8 @@ provider "aws" {
   region = "us-west-2"
 }
 
-resource "random_string" "random_string" {
-  length = 8
-}
-
 variable "unique_string" {
-  default = "${random_string.random_string.result}"
+  default = "akunamatata007"
   type = string
 }
 
