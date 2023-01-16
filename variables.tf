@@ -1,4 +1,4 @@
 variable "unique_string" {
-  default = "${random_string.random_string.result}"
+  default = "akunamatata"
   type = string
 }
