@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "eu-west-3"
+}
+
 resource "aws_s3_bucket" "my-bucket" {
   bucket = "my-bucket-name-${var.unique_string}"
 }
